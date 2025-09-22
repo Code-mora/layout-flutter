@@ -9,10 +9,12 @@ class LatihanWaz extends StatelessWidget {
       appBar: AppBar(title: Text("Ini latihan teks")),
       body: Center(child: Text("Ini Latihan Teks", 
         style: TextStyle(
-        fontSize: 48,
-        fontWeight: FontWeight.bold,
-        fontStyle: FontStyle.italic,
-      ),)),
+            fontSize: 48,
+            fontWeight: FontWeight.bold,
+            fontStyle: FontStyle.italic,
+          ),
+        )
+      ),
     );
   }
 }

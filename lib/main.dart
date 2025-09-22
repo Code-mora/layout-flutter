@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:project_abalabal/layout.dart';
+import 'package:project_abalabal/tugas/layout2.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -10,6 +10,6 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: TugasLayout());
+    return MaterialApp(home: TugasLayout2());
   }
 }
