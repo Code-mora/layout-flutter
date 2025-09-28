@@ -155,26 +155,30 @@ class Quiz1 extends StatelessWidget {
                   ),
                 ),
               ),
-              Container(
-                margin: EdgeInsets.all(16),
-                padding: EdgeInsets.all(12),
-                height: 130,
-                width: 450,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(15)),
-                  image: DecorationImage(
-                    image: AssetImage("gambar/card.jpg"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
+              Stack(
                 children: [
-                  Image(
-                    image: AssetImage("gambar/figure.png"),
-                    height: 80,
-                    width: 80,
+                  Padding(
+                    padding: const EdgeInsets.only(top: 5, left: 30),
+                    child: Container(
+                      height: 100,
+                      width: 450,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(15)),
+                        image: DecorationImage(
+                          image: AssetImage("gambar/card.jpg"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      child: Row(
+                        children: [
+                          Image(
+                            image: AssetImage("gambar/figure.png"),
+                            height: 70,
+                            width: 70,
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
