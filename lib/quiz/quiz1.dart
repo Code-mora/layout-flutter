@@ -155,40 +155,28 @@ class Quiz1 extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 10, left: 30),
-                child: Container(
-                  height: 120,
-                  width: 500,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(25)),
-                    image: DecorationImage(
-                      image: AssetImage("gambar/card.jpg"),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(bottom: 150, left: 5),
-                        child: Image(
-                          image: AssetImage("gambar/figure.png"),
-                          height: 80,
-                          width: 80,
-                        ),
-                      ),
-                      Text(
-                        "You are doing great",
-                        style: TextStyle(
-                          fontSize: 15,
-                          color: Colors.blue,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
+              Container(
+                margin: EdgeInsets.all(16),
+                padding: EdgeInsets.all(12),
+                height: 130,
+                width: 450,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(15)),
+                  image: DecorationImage(
+                    image: AssetImage("gambar/card.jpg"),
+                    fit: BoxFit.cover,
                   ),
                 ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Image(
+                    image: AssetImage("gambar/figure.png"),
+                    height: 80,
+                    width: 80,
+                  ),
+                ],
               ),
             ],
           ),
