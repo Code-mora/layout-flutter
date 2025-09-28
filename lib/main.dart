@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_abalabal/latihan/pages1.dart';
-import 'package:project_abalabal/latihan/pages2.dart';
 import 'package:project_abalabal/quiz/quiz1.dart';
 
 
