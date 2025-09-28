@@ -167,6 +167,25 @@ class Quiz1 extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
+                  child: Row(
+                    children: [
+                      Align(
+                        child: Image(
+                          image: AssetImage("gambar/figure.png"),
+                          height: 80,
+                          width: 80,
+                        ),
+                      ),
+                      Text(
+                        "You are doing great",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.blue,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               ),
             ],
