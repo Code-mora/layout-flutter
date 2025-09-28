@@ -169,12 +169,27 @@ class Quiz1 extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                       ),
-                      child: Row(
+                      child: Column(
                         children: [
+                          Text(
+                            "You are doing great",
+                            style: TextStyle(
+                              fontSize: 15,
+                              color: Colors.blue,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "keep it up\nstick to your plan",
+                            style: TextStyle(
+                              fontSize: 12,
+                              color: const Color.fromARGB(245, 199, 152, 152),
+                            ),
+                          ),
                           Image(
                             image: AssetImage("gambar/figure.png"),
-                            height: 70,
-                            width: 70,
+                            height: 80,
+                            width: 80,
                           ),
                         ],
                       ),
