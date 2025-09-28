@@ -167,9 +167,11 @@ class Quiz1 extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  child: Row(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Align(
+                      Padding(
+                        padding: const EdgeInsets.only(bottom: 150, left: 5),
                         child: Image(
                           image: AssetImage("gambar/figure.png"),
                           height: 80,
