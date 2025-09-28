@@ -164,6 +164,7 @@ class Quiz1 extends StatelessWidget {
                       width: 450,
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(15)),
+                        color: Colors.white,
                         image: DecorationImage(
                           image: AssetImage("gambar/card.jpg"),
                           fit: BoxFit.cover,
@@ -186,13 +187,17 @@ class Quiz1 extends StatelessWidget {
                               color: const Color.fromARGB(245, 199, 152, 152),
                             ),
                           ),
-                          Image(
-                            image: AssetImage("gambar/figure.png"),
-                            height: 80,
-                            width: 80,
-                          ),
                         ],
                       ),
+                    ),
+                  ),
+                  Positioned(
+                    bottom: 25,
+                    left: 5,
+                    child: Image(
+                      image: AssetImage("gambar/figure.png"),
+                      height: 80,
+                      width: 80,
                     ),
                   ),
                 ],
