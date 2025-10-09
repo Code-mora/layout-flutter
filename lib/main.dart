@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:project_abalabal/latihan/list_1.dart';
+import 'package:project_abalabal/latihan/list_2.dart';
 import 'package:project_abalabal/latihan/pages1.dart';
 import 'package:project_abalabal/latihan/pages2.dart';
+import 'package:project_abalabal/latihan/state_1.dart';
 import 'package:project_abalabal/quiz/quiz1.dart';
 
 
@@ -25,7 +28,7 @@ class MyApp extends StatelessWidget {
       //   "/halaman2":(context)=>Page2()
       // },
       // initialRoute: "/",
-      home: Quiz1()
+      home: List2()
     );
   }
 }
