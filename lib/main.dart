@@ -1,35 +1,62 @@
 import 'package:flutter/material.dart';
-import 'package:project_abalabal/latihan/list_1.dart';
-import 'package:project_abalabal/latihan/list_2.dart';
-import 'package:project_abalabal/latihan/pages1.dart';
-import 'package:project_abalabal/latihan/pages2.dart';
-import 'package:project_abalabal/latihan/state_1.dart';
-import 'package:project_abalabal/latihan/text_box.dart';
-import 'package:project_abalabal/quiz/quiz1.dart';
-
-
-
-
-
-
-
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  bool isDark = false;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    ambilData(); 
+  }
+
+  //function untuk menyimpan data ke shared preferences 
+  void simpanData() async {
+    final p = await SharedPreferences.getInstance();
+    await p.setBool("tema_gelap", isDark);
+  }
+
+  void ambilData() async {
+    final p = await SharedPreferences.getInstance();
+    setState(() {
+      isDark =  p.getBool("tema_gelap") ?? false;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      // routes: {
-      //   "/" :(context)=> TextBoxPage(),
-      //   "/halaman2":(context)=>Page2()
-      // },
-      // initialRoute: "/",
-      home: TextBoxPage(),
+      title: "Latihan share preference",
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: isDark ? ThemeMode.dark : ThemeMode.light,
+      home: Scaffold(
+        appBar: AppBar(title: Text("switch theme")),
+        body: Center(
+          child: SwitchListTile(
+            title: Text("Tombol tema"),
+            value: isDark,
+            onChanged: (bool value) {
+              setState(() {
+                isDark = value;
+              });
+              simpanData();
+            },
+          ),
+        ),
+      ),
     );
   }
 }

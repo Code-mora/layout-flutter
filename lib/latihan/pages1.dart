@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_abalabal/latihan/pages2.dart';
 
 class Page1 extends StatelessWidget {
   const Page1({super.key});
